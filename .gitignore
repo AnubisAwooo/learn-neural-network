@@ -1,3 +1,8 @@
+.idea
+test_data.txt
+training_data.txt
+validation_data.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
