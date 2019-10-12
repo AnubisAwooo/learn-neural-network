@@ -2,6 +2,11 @@
 test_data.txt
 training_data.txt
 validation_data.txt
+test_data/
+training_data/
+validation_data/
+out/
+*.iml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
