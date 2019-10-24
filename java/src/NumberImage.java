@@ -30,4 +30,14 @@ class NumberImage {
         }
     }
 
+    boolean success(double[] a) {
+        for (int i = 0; i < 10; i++) {
+            double r = a[i] + numbers[i];
+            if (0.1 < r && r < 1.9) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
