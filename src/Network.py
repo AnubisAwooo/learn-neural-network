@@ -27,10 +27,10 @@ class Network(object):
                 for k in range(0, n, mini_batch_size)]
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, eta)
-        if test_data:
-            print("Epoch %s: %s / %s" % (j, self.evaluate(test_data), n_test))
-        else:
-            print("Epoch %s complete" % j)
+            if test_data:
+                print("Epoch %s: %s / %s" % (j, self.evaluate(test_data), n_test))
+            else:
+                print("Epoch %s complete" % j)
 
     def update_mini_batch(self, mini_batch, eta):
         nabla_b = [np.zeros(b.shape) for b in self.biases]
@@ -111,11 +111,11 @@ def write(l, name, iterable):
             f.write("\n")
 
 
-write(training_data, 'training_data', True)
-write(validation_data, 'validation_data', False)
-write(test_data, 'test_data', False)
+# write(training_data, 'training_data', True)
+# write(validation_data, 'validation_data', False)
+# write(test_data, 'test_data', False)
 
-# net = Network([784, 30, 10])
+net = Network([784, 100, 100, 10])
 
-# net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+net.SGD(training_data, 130, 10, 1.0, test_data=test_data)
 
